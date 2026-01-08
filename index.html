@@ -4,243 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Patrick - PhD Candidate in Electrochemistry at Jilin University, specializing in Battery Informatics Research">
-    <meta name="keywords" content="Battery Informatics, Electrochemistry, Parameter Identification, Battery Modeling, Lifetime Prediction">
+    <title>Patrick | Battery Informatics</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/webp" href="cropped-logo1.webp">
-    <title>Patrick | Battery Informatics Researcher</title>
+    <link rel="apple-touch-icon" href="cropped-logo1.webp">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        anime: {
+                            pink: '#FFB7C5',
+                            blue: '#A0E6FF',
+                            purple: '#E0BBE4',
+                            yellow: '#FFF4BD',
+                            text: '#4A5568'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <!-- Floating Decorations -->
-    <div class="floating-decorations">
-        <div class="floating-star star-1">✦</div>
-        <div class="floating-star star-2">★</div>
-        <div class="floating-star star-3">✧</div>
-        <div class="floating-star star-4">❋</div>
-        <div class="floating-star star-5">✦</div>
-        <div class="floating-circle circle-1"></div>
-        <div class="floating-circle circle-2"></div>
-        <div class="floating-circle circle-3"></div>
+<body class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 min-h-screen text-slate-700 dark:text-slate-200 font-body overflow-x-hidden selection:bg-pink-200 selection:text-pink-900">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-200 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-purple-200 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-delayed"></div>
+        <div class="absolute -bottom-32 left-20 w-96 h-96 bg-pink-200 dark:bg-pink-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="cropped-logo1.webp" alt="Patrick Logo" class="logo-icon-img">
-                <span class="logo-text">Patrick</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <nav class="fixed w-full z-50 top-0 left-0 px-6 py-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="glass-card rounded-full px-6 py-3 flex justify-between items-center">
+                <a href="#" class="font-heading font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500">
+                    Patrick<span class="text-slate-400">.site</span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-slate-600 dark:text-slate-300 font-semibold">
+                    <a href="#home" class="hover:text-pink-500 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-pink-500 transition-colors">About</a>
+                    <a href="#research" class="hover:text-pink-500 transition-colors">Research</a>
+                    <a href="#contact" class="hover:text-pink-500 transition-colors">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-icon">🔋</span>
-                <span>Battery Informatics Researcher</span>
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6 relative">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-4 px-4 py-2 bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-full border border-white/50 dark:border-slate-700 text-indigo-500 dark:text-indigo-300 font-bold text-sm animate-bounce-slow shadow-sm">
+                ✨ Exploring the Future of Energy
             </div>
-            <h1 class="hero-title">
-                <span class="greeting">Hi, I'm</span>
-                <span class="name">Patrick</span>
-                <span class="sparkle">✨</span>
+            <h1 class="font-heading text-6xl md:text-8xl font-bold mb-6 text-slate-800 dark:text-white leading-tight">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500 typing-effect">Patrick</span>
             </h1>
-            <p class="hero-subtitle">
-                PhD Candidate in Electrochemistry at Jilin University<br>
-                Exploring the secrets of batteries, driving the future of energy with data
+            <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 font-light max-w-2xl mx-auto leading-relaxed">
+                Ph.D. Student @
+                <span class="font-bold text-blue-600 relative inline-block group cursor-pointer">
+                    Jilin University
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-200 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                </span>
+                <br>
+                Deciphering battery secrets with <span class="font-bold text-purple-500">Electrochemistry</span> & <span class="font-bold text-pink-500">Informatics</span>.
             </p>
-            <div class="hero-cta">
-                <a href="#research" class="btn btn-primary">
-                    <span>Explore My Research</span>
-                    <span class="btn-icon">→</span>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Contact Me</span>
-                </a>
-            </div>
-        </div>
-        <div class="hero-decoration">
-            <div class="battery-icon">
-                <div class="battery-body">
-                    <div class="battery-level"></div>
-                </div>
-                <div class="battery-cap"></div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <div class="scroll-arrow">↓</div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="section-container">
-            <h2 class="section-title">
-                <span class="title-icon">📖</span>
-                <span>About Me</span>
-            </h2>
-            <div class="about-card">
-                <div class="about-content">
-                    <p class="about-text">
-                        👋 Hey there! I'm <strong>Patrick</strong>, a PhD candidate in Electrochemistry at <strong>Jilin University</strong>.
-                    </p>
-                    <p class="about-text">
-                        I'm passionate about combining <span class="highlight">Machine Learning</span> with <span class="highlight">Electrochemistry</span>,
-                        dedicated to cutting-edge research in Battery Informatics. I believe data-driven approaches can bring revolutionary breakthroughs to new energy technologies!
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-icon">🎓</span>
-                            <span class="stat-label">Jilin University</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">⚗️</span>
-                            <span class="stat-label">PhD in Electrochemistry</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">🔬</span>
-                            <span class="stat-label">Battery Informatics</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#research" class="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+                    <i class="fa-solid fa-flask"></i> My Research
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md text-slate-700 dark:text-white font-bold rounded-2xl shadow-sm border border-white/50 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+                    <i class="fa-regular fa-paper-plane"></i> Say Hello
+                </a>
             </div>
         </div>
+
+        <!-- Decoration Characters/Icons Floating (Using standard Icons instead of images for privacy/no-avatar rule) -->
+        <div class="absolute right-[10%] top-[20%] text-6xl text-yellow-300 opacity-80 animate-float-delayed hidden md:block">⚡</div>
+        <div class="absolute left-[10%] bottom-[20%] text-6xl text-blue-300 opacity-80 animate-float hidden md:block">🔋</div>
+        <div class="absolute right-[15%] bottom-[15%] text-6xl text-pink-300 opacity-80 animate-float-delayed hidden md:block">📊</div>
     </section>
 
     <!-- Research Section -->
-    <section class="research" id="research">
-        <div class="section-container">
-            <h2 class="section-title">
-                <span class="title-icon">🔬</span>
-                <span>Research Areas</span>
+    <section id="research" class="py-20 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-center mb-16 text-slate-800 dark:text-white">
+                Research Focus
+                <span class="block text-lg font-body font-normal text-slate-500 dark:text-slate-400 mt-2">Unlocking battery potential through data</span>
             </h2>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="card-icon">📊</div>
-                    <h3>Parameter Identification</h3>
-                    <p>Utilizing advanced optimization algorithms and data analysis techniques to precisely identify battery model parameters, providing reliable foundations for battery performance evaluation.</p>
-                    <div class="card-decoration"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 border-t-4 border-blue-400">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-3xl text-blue-500 mb-6 mx-auto md:mx-0">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-slate-800 dark:text-slate-100">Parameter Identification</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Extracting precise physical and chemical parameters from experimental data to build accurate battery models.
+                    </p>
                 </div>
-                <div class="research-card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Full Electrochemical Modeling</h3>
-                    <p>Building accurate electrochemical models to deeply understand battery internal reaction mechanisms, achieving multi-scale simulations from atomic level to system level.</p>
-                    <div class="card-decoration"></div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 border-t-4 border-purple-400">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-3xl text-purple-500 mb-6 mx-auto md:mx-0">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-slate-800 dark:text-slate-100">Full Electrochemical Modeling</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Simulating internal battery states (concentration, potential) to understand degradation mechanisms at a microscopic level.
+                    </p>
                 </div>
-                <div class="research-card">
-                    <div class="card-icon">📈</div>
-                    <h3>Battery Lifetime Prediction</h3>
-                    <p>Developing high-precision lifetime prediction models based on machine learning and data-driven methods, supporting battery health management and safety early warning.</p>
-                    <div class="card-decoration"></div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 border-t-4 border-pink-400">
+                    <div class="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center text-3xl text-pink-500 mb-6 mx-auto md:mx-0">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-4 text-slate-800 dark:text-slate-100">Battery Life Prediction</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Leveraging machine learning and physics-based models to predict RUL (Remaining Useful Life) and optimize charging strategies.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="section-container">
-            <h2 class="section-title">
-                <span class="title-icon">💻</span>
-                <span>Tech Stack</span>
-            </h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">MATLAB</span>
-                        <span class="skill-tag">Julia</span>
+    <!-- Stats / About Section -->
+    <section id="about" class="py-20 px-6 bg-white/30 dark:bg-slate-900/30 backdrop-blur-sm">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 w-full">
+                <!-- Using a styled code block as an image replacement -->
+                <div class="window-frame bg-slate-800 rounded-2xl p-6 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <div class="flex gap-2 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Data Science</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">PyTorch</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Electrochemical Simulation</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">COMSOL</span>
-                        <span class="skill-tag">PyBaMM</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">LaTeX</span>
-                        <span class="skill-tag">Docker</span>
+                    <code class="font-mono text-sm text-green-400 block mb-2"># About Patrick</code>
+                    <div class="font-mono text-sm text-slate-300 space-y-2">
+                        <p><span class="text-pink-400">class</span> <span class="text-yellow-400">Researcher</span>:</p>
+                        <p class="pl-4">university = <span class="text-green-300">"Jilin University"</span></p>
+                        <p class="pl-4">major = <span class="text-green-300">"Electrochemistry"</span></p>
+                        <p class="pl-4">interests = [</p>
+                        <p class="pl-8"><span class="text-green-300">"Battery Informatics"</span>,</p>
+                        <p class="pl-8"><span class="text-green-300">"Machine Learning"</span></p>
+                        <p class="pl-4">]</p>
+                        <p class="pl-4"><span class="text-purple-400">def</span> <span class="text-blue-400">solve_energy_crisis</span>(self):</p>
+                        <p class="pl-8"><span class="text-pink-400">return</span> <span class="text-green-300">"Greener Future 🌿"</span></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-container">
-            <h2 class="section-title">
-                <span class="title-icon">📬</span>
-                <span>Get In Touch</span>
-            </h2>
-            <div class="contact-card">
-                <p class="contact-text">
-                    If you're interested in my research or would like to collaborate, feel free to reach out!
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="font-heading text-4xl font-bold mb-6 text-slate-800 dark:text-white">Driven by Curiosity</h2>
+                <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                    I bridge the gap between traditional electrochemistry and modern data science.
+                    My work focuses on unlocking the hidden patterns in battery data to make energy storage safer,
+                    longer-lasting, and more efficient.
                 </p>
-                <div class="contact-links">
-                    <a href="https://github.com/jerry328-sudo" class="contact-link github" target="_blank" rel="noopener">
-                        <span class="link-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </span>
-                        <span class="link-text">GitHub</span>
-                    </a>
-                    <a href="mailto:patrick2220w@gmail.com" class="contact-link email">
-                        <span class="link-icon">📧</span>
-                        <span class="link-text">Email</span>
-                    </a>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-bold">#Python</span>
+                    <span class="px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-bold">#PyTorch</span>
+                    <span class="px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-bold">#COMSOL</span>
+                    <span class="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-bold">#Matlab</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="footer-text">
-                <span class="footer-icon">⚡</span>
-                Made with 💜 by Patrick
-            </p>
-            <p class="footer-copyright">© 2026 Patrick. All rights reserved.</p>
+    <footer id="contact" class="py-12 text-center text-slate-500 relative overflow-hidden">
+        <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"></div>
+        <h2 class="font-heading text-3xl font-bold mb-8 text-slate-700 dark:text-slate-300">Let's Connect!</h2>
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="mailto:patrick2220w@gmail.com" class="w-12 h-12 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-xl text-slate-600 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-900 hover:text-red-500 shadow-md transition-all hover:scale-110">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://github.com/jerry328-sudo" target="_blank" class="w-12 h-12 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-black dark:hover:text-white shadow-md transition-all hover:scale-110">
+                <i class="fa-brands fa-github"></i>
+            </a>
         </div>
-        <div class="footer-decoration">
-            <span>✦</span>
-            <span>★</span>
-            <span>✧</span>
-        </div>
+        <p>&copy; 2026 Patrick. All rights reserved.</p>
+        <p class="text-sm mt-2 opacity-60">Designed with ❤️ & Battery Power</p>
     </footer>
 
     <script src="js/main.js"></script>
